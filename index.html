@@ -24,7 +24,6 @@
             position: relative;
         }
 
-        /* Estrellas de fondo */
         #stars-container {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -42,7 +41,6 @@
             50% { opacity: 1; transform: scale(1.2); }
         }
 
-        /* Tarjeta Principal */
         .main-card {
             width: 90%;
             max-width: 450px;
@@ -64,11 +62,10 @@
             text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
         }
 
-        /* Ramo de Girasoles */
         .bouquet-container {
             position: relative;
             width: 100%;
-            height: 280px;
+            height: 290px;
             margin: 10px 0;
             display: flex;
             justify-content: center;
@@ -76,8 +73,8 @@
         }
         .flower-glow {
             position: absolute;
-            width: 240px;
-            height: 240px;
+            width: 250px;
+            height: 250px;
             background: radial-gradient(circle, rgba(255,215,0,0.35) 0%, rgba(0,0,0,0) 70%);
             border-radius: 50%;
             animation: pulseGlow 3s infinite alternate ease-in-out;
@@ -87,11 +84,11 @@
             100% { transform: scale(1.2); opacity: 0.9; }
         }
 
-        .flower-svg {
+        .flower-img {
             width: 270px;
-            height: 270px;
+            height: auto;
             z-index: 3;
-            filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.5));
+            filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5));
             animation: floatBouquet 4s infinite ease-in-out alternate;
         }
         @keyframes floatBouquet {
@@ -99,7 +96,6 @@
             100% { transform: translateY(-8px) rotate(1.5deg); }
         }
 
-        /* Candado Interactivo */
         .lock-box {
             background: rgba(30, 26, 15, 0.95);
             border: 2px solid #ffd700;
@@ -165,7 +161,6 @@
             box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
         }
 
-        /* Modal Carta */
         .modal {
             display: none;
             position: fixed;
@@ -218,7 +213,6 @@
             font-weight: bold;
         }
 
-        /* Pétalos */
         .petal {
             position: fixed;
             background: #ffd700;
@@ -243,84 +237,8 @@
         
         <div class="bouquet-container">
             <div class="flower-glow"></div>
-            
-            <!-- SVG de Ramo Ilustrado Nativo (No depende de internet ni links externos) -->
-            <svg class="flower-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <!-- Modelo de Girasol Artístico con Sombra -->
-                    <g id="art-sunflower">
-                        <!-- Hojas Verdes Orgánicas -->
-                        <path d="M-35,10 C-65,-30 -25,-60 0,-30 C25,-60 65,-30 35,10 Z" fill="#4d6e28"/>
-                        <path d="M-25,5 C-50,-25 -15,-50 0,-25 C15,-50 50,-25 25,5 Z" fill="#698f35"/>
-                        
-                        <!-- Capa 1 de pétalos (Fondo Cálido Oscuro) -->
-                        <g fill="#d98200">
-                            <path d="M0,0 C-18,-60 0,-85 0,-85 C0,-85 18,-60 0,0" transform="rotate(0)"/>
-                            <path d="M0,0 C-18,-60 0,-85 0,-85 C0,-85 18,-60 0,0" transform="rotate(22.5)"/>
-                            <path d="M0,0 C-18,-60 0,-85 0,-85 C0,-85 18,-60 0,0" transform="rotate(45)"/>
-                            <path d="M0,0 C-18,-60 0,-85 0,-85 C0,-85 18,-60 0,0" transform="rotate(67.5)"/>
-                            <path d="M0,0 C-18,-60 0,-85 0,-85 C0,-85 18,-60 0,0" transform="rotate(90)"/>
-                            <path d="M0,0 C-18,-60 0,-85 0,-85 C0,-85 18,-60 0,0" transform="rotate(112.5)"/>
-                            <path d="M0,0 C-18,-60 0,-85 0,-85 C0,-85 18,-60 0,0" transform="rotate(135)"/>
-                            <path d="M0,0 C-18,-60 0,-85 0,-85 C0,-85 18,-60 0,0" transform="rotate(157.5)"/>
-                            <path d="M0,0 C-18,-60 0,-85 0,-85 C0,-85 18,-60 0,0" transform="rotate(180)"/>
-                            <path d="M0,0 C-18,-60 0,-85 0,-85 C0,-85 18,-60 0,0" transform="rotate(202.5)"/>
-                            <path d="M0,0 C-18,-60 0,-85 0,-85 C0,-85 18,-60 0,0" transform="rotate(225)"/>
-                            <path d="M0,0 C-18,-60 0,-85 0,-85 C0,-85 18,-60 0,0" transform="rotate(247.5)"/>
-                            <path d="M0,0 C-18,-60 0,-85 0,-85 C0,-85 18,-60 0,0" transform="rotate(270)"/>
-                            <path d="M0,0 C-18,-60 0,-85 0,-85 C0,-85 18,-60 0,0" transform="rotate(292.5)"/>
-                            <path d="M0,0 C-18,-60 0,-85 0,-85 C0,-85 18,-60 0,0" transform="rotate(315)"/>
-                            <path d="M0,0 C-18,-60 0,-85 0,-85 C0,-85 18,-60 0,0" transform="rotate(337.5)"/>
-                        </g>
-                        <!-- Capa 2 de pétalos (Amarillo Brillante) -->
-                        <g fill="#ffcc00">
-                            <path d="M0,0 C-14,-55 0,-78 0,-78 C0,-78 14,-55 0,0" transform="rotate(11.25)"/>
-                            <path d="M0,0 C-14,-55 0,-78 0,-78 C0,-78 14,-55 0,0" transform="rotate(33.75)"/>
-                            <path d="M0,0 C-14,-55 0,-78 0,-78 C0,-78 14,-55 0,0" transform="rotate(56.25)"/>
-                            <path d="M0,0 C-14,-55 0,-78 0,-78 C0,-78 14,-55 0,0" transform="rotate(78.75)"/>
-                            <path d="M0,0 C-14,-55 0,-78 0,-78 C0,-78 14,-55 0,0" transform="rotate(101.25)"/>
-                            <path d="M0,0 C-14,-55 0,-78 0,-78 C0,-78 14,-55 0,0" transform="rotate(123.75)"/>
-                            <path d="M0,0 C-14,-55 0,-78 0,-78 C0,-78 14,-55 0,0" transform="rotate(146.25)"/>
-                            <path d="M0,0 C-14,-55 0,-78 0,-78 C0,-78 14,-55 0,0" transform="rotate(168.75)"/>
-                            <path d="M0,0 C-14,-55 0,-78 0,-78 C0,-78 14,-55 0,0" transform="rotate(191.25)"/>
-                            <path d="M0,0 C-14,-55 0,-78 0,-78 C0,-78 14,-55 0,0" transform="rotate(213.75)"/>
-                            <path d="M0,0 C-14,-55 0,-78 0,-78 C0,-78 14,-55 0,0" transform="rotate(236.25)"/>
-                            <path d="M0,0 C-14,-55 0,-78 0,-78 C0,-78 14,-55 0,0" transform="rotate(258.75)"/>
-                            <path d="M0,0 C-14,-55 0,-78 0,-78 C0,-78 14,-55 0,0" transform="rotate(281.25)"/>
-                            <path d="M0,0 C-14,-55 0,-78 0,-78 C0,-78 14,-55 0,0" transform="rotate(303.75)"/>
-                            <path d="M0,0 C-14,-55 0,-78 0,-78 C0,-78 14,-55 0,0" transform="rotate(326.25)"/>
-                            <path d="M0,0 C-14,-55 0,-78 0,-78 C0,-78 14,-55 0,0" transform="rotate(348.75)"/>
-                        </g>
-                        <!-- Capa 3 Pétalos Frontales (Oro Luminoso) -->
-                        <g fill="#ffea00">
-                            <path d="M0,0 C-10,-45 0,-68 0,-68 C0,-68 10,-45 0,0" transform="rotate(5)"/>
-                            <path d="M0,0 C-10,-45 0,-68 0,-68 C0,-68 10,-45 0,0" transform="rotate(50)"/>
-                            <path d="M0,0 C-10,-45 0,-68 0,-68 C0,-68 10,-45 0,0" transform="rotate(95)"/>
-                            <path d="M0,0 C-10,-45 0,-68 0,-68 C0,-68 10,-45 0,0" transform="rotate(140)"/>
-                            <path d="M0,0 C-10,-45 0,-68 0,-68 C0,-68 10,-45 0,0" transform="rotate(185)"/>
-                            <path d="M0,0 C-10,-45 0,-68 0,-68 C0,-68 10,-45 0,0" transform="rotate(230)"/>
-                            <path d="M0,0 C-10,-45 0,-68 0,-68 C0,-68 10,-45 0,0" transform="rotate(275)"/>
-                            <path d="M0,0 C-10,-45 0,-68 0,-68 C0,-68 10,-45 0,0" transform="rotate(320)"/>
-                        </g>
-                        <!-- Centro Texturizado -->
-                        <circle cx="0" cy="0" r="32" fill="#2d1a0c"/>
-                        <circle cx="0" cy="0" r="26" fill="#422915"/>
-                        <circle cx="0" cy="0" r="20" fill="#5c3a1e"/>
-                        <circle cx="0" cy="0" r="12" fill="#3b220f"/>
-                    </g>
-                </defs>
-
-                <!-- Composición del Ramo de 3 Flores Tupidas -->
-                <g transform="translate(200, 140)">
-                    <use href="#art-sunflower" transform="scale(0.95)" />
-                </g>
-                <g transform="translate(130, 225)">
-                    <use href="#art-sunflower" transform="scale(0.9) rotate(-12)" />
-                </g>
-                <g transform="translate(270, 230)">
-                    <use href="#art-sunflower" transform="scale(0.9) rotate(12)" />
-                </g>
-            </svg>
+            <!-- Carga de la imagen de tu repositorio -->
+            <img src="./girasoles.png" alt="Girasoles" class="flower-img">
         </div>
 
         <div class="lock-box">
